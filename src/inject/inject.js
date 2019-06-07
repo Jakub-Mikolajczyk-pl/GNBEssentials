@@ -7,7 +7,7 @@
 	var branch = document.getElementsByClassName('branch-name')[0].textContent;
 	console.log(branch.textContent);
 	var url='http://192.168.9.102:8080/job/gnb_process_propertyInsurance/parambuild/?SERVER_ADDRESS=192.168.11.21&SUBSTITUTION_PROPERTIES=newEnv&GIT_BRANCH='+branch;
-	button.addEventListener(onclick, redirect(url));
+	button.addEventListener('click', redirect(url));
 	const branchNameElement = document.getElementsByClassName('pull-request-metadata')[0];
 	branchNameElement.appendChild(button);
 
