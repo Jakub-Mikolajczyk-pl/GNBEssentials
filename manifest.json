@@ -16,7 +16,8 @@
     "default_popup": "src/page_action/page_action.html"
   },
   "permissions": [
-    "https://bitbucket.int.gnb.pl/projects/BPMS/repos/gnb_process_propertyinsurance/pull-requests"
+    "https://bitbucket.int.gnb.pl/projects/BPMS/repos/*/pull-requests",
+    "tabs"
   ],
   "content_scripts": [ 
     {
@@ -26,7 +27,7 @@
     "css": [
       "src/inject/inject.css"
     ],
-    "matches": ["https://bitbucket.int.gnb.pl/projects/BPMS/repos/gnb_process_propertyinsurance/pull-requests/*"],
+    "matches": ["https://bitbucket.int.gnb.pl/projects/BPMS/repos/*/pull-requests/*"],
     "run_at": "document_end"
   }
 ]
