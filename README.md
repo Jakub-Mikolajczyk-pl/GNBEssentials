@@ -1,2 +1,4 @@
-# InstallReviewedCode
-Chrome extension, adding button to bitbucket pull-requests to run jenkins job which deploys reviewed code on reviewers docker
+# GNBEssentials
+Functions already implemented:
+- Redirecting all request from https://redmine to https://redmine
+- Injecting button in bitbucket PR sites to install reviewed code on our workspace dockers
