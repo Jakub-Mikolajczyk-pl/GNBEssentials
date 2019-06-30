@@ -11,7 +11,9 @@
 		var packageName = currentPageURL.match(/repos\/(.*?)\//)[1];
 		console.log(packageName);
 	
-	
+		const jenkins_address = () => chrome.storage.local.get('jenkins_address').value;
+		console.log(jenkins_address);
+
 	var url='http://192.168.9.102:8080/job/'+packageName+'/parambuild/?SERVER_ADDRESS=192.168.11.21&SUBSTITUTION_PROPERTIES=newEnv&GIT_BRANCH='+branch;
 	button.addEventListener('click', function(){redirect(url)});
 	const branchNameElement = document.getElementsByClassName('pull-request-metadata')[0];

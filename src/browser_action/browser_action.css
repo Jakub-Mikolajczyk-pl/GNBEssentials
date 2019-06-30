@@ -1,0 +1,30 @@
+#mainPopup {
+    padding: 10px;
+    height: 130px;
+    width: 300px;
+    font-family: Helvetica, Ubuntu, Arial, sans-serif;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  .inline {
+    display: inline;
+  }
+
+  label {
+    float: left;
+  }
+
+  input {
+    float: right;
+  }
+
+  .wrapper {
+    min-height: 20%;
+    height: auto !important;
+    height: 20%;
+    margin: 0 auto;
+    /* the bottom margin is the negative value of the footer's height */
+  }
