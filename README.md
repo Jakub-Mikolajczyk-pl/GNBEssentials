@@ -1,5 +1,9 @@
 # GNBEssentials
-Functions already implemented:
+
+Tools, making work with Redmine, Bitbucket, git + webmethods stack - a lot easier.
+
+
+### Functions already implemented:
 - Redirecting all request from http://redmine to https://redmine
 - Injecting button in bitbucket PR sites to install reviewed code on our workspace dockers
 
