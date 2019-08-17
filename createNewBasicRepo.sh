@@ -1,11 +1,11 @@
 #!/bin/bash
-echo -e "Podaj nazwę nowo utworzonego repozytorium na bitbuckecie: \c "
+echo -e "Write Your new repository name: \c "
 read repoName
 git init $repoName
 cd $repoName
-echo -e "Podaj swój login na bitbuckecie: \c "
+echo -e "Write Your login here: \c "
 read $userLogin
-git remote add origin https://${userLogin}@Your.Bitbucket.Address.Here/scm/bpms/${repoName}.git
+git remote add origin https://${userLogin}@Your.Bitbucket.Address.Here/path/stillPath/${repoName}.git
 mkdir modules
 cd modules
 mkdir IS BPM
