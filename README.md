@@ -10,3 +10,4 @@ Tools, making work with Redmine, Bitbucket, git + webmethods stack - a lot easie
 ### Other improvments:
 - Git commands making flow.xml, etc. easier to version -> [Git commands](gitCommands.md)
 - Powershell script which automates part of the alerting users about incoming software installation, creating event in their calendar and setting timer for alarm -> [Powershell script](SprintDown.ps1)
+- Bash script for creating basic repository structure, with branches, and changes of master branch to sandbox branch -> [Bash script](createNewBasicRepo.sh)
