@@ -18,7 +18,7 @@ edytujecie ten pliczek i dodajecie komendy w ten sposób:
     
 ## Komendy:
   
-- **git newb** - przykład użycia: git newb 1123123
+- **git newb** - przykład użycia: git newb 1123123  
 komenda ta przechodzi na główny branch projektowy (standardowo sandbox) pulluje najnowsze zmiany i odbija nowego brancha z przedrostkiem iss_
 kod:     newb = "!f() { ticketnum=$1; git checkout -f sandbox; git pull; git checkout -b \"iss_${ticketnum}\"; }; f"
  
@@ -28,11 +28,11 @@ kod:     bclean = "!f() { git branch --merged ${1-sandbox} | grep -v " ${1-sandb
 - **git ffp** - komenda ta merguje najnowsze zmiany z brancha sandbox do aktualnego brancha (Stosować tylko wtedy gdy zmiany które chcemy zmergować do glownego brancha sa juz zacomitowanie - przydatne przy pracy na branchu packages
 kod:     ffp = "!f() { currentBranch=$(git rev-parse --abbrev-ref HEAD); git checkout -f sandbox; git pull; git checkout ${currentBranch}; git merge sandbox; }; f"
  
-- **git addflow** - git addflow addDocument putDocument ...
+- **git addflow** - git addflow addDocument putDocument ...  
 komenda ta staguje flowy do commita - wyszukuje scieżkę do folderu i dodaje folder do commita
 kod:    addflow = "!f() { for var in "$@"; do flow=$(find -name $var); git add \"$flow\"; done; }; f"
  
-- **git addjs** - przykład użycia: git addjs getProperty loadErrorCodes...
+- **git addjs** - przykład użycia: git addjs getProperty loadErrorCodes...  
 komenda ta wyszukuje skompilowany kod Java servicu, java.frag i node.ndf tego servicu i staguje to do commita
 kod: addjs = "!f() { for var in "$@"; do js=$(find -name $var); jsDirname=$(dirname ${js}); jsCodeFile=$(basename ${jsDirname}); jsCodeFilePath=$(find -name ${jsCodeFile}.java); git add \"$jsCodeFilePath\"; git add \"$js\"; done; }; f"
  
