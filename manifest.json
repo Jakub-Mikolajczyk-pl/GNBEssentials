@@ -20,7 +20,8 @@
     "*://rm.gnb.pl/*",
     "webRequest",
     "webRequestBlocking",
-    "storage"
+    "storage",
+    "tabs"
   ],
   "content_scripts": [ 
     {
