@@ -1,0 +1,9 @@
+[alias]
+    newb = "!f() { ticketnum=$1; git checkout -f master; git pull; git checkout -b \"iss_${ticketnum}\"; }; f"
+    bclean = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs -r git branch -d; }; f"
+    ffm = "!f() { currentBranch=$(git rev-parse --abbrev-ref HEAD); git checkout -f master; git pull; git checkout ${currentBranch}; git merge master; }; f"
+    ffr = "!f() { git pull --rebase origin master;  }; f"
+    addflow = "!f() { for var in "$@"; do flow=$(find -name $var); git add \"$flow\"; done; }; f"
+    addjs = "!f() { for var in "$@"; do js=$(find -name $var); jsDirname=$(dirname ${js}); jsCodeFile=$(basename ${jsDirname}); jsCodeFilePath=$(find -name ${jsCodeFile}.java); git add \"$jsCodeFilePath\"; git add \"$js\"; done; }; f"
+    addman = "!f() { manifest=$(find -name manifest.v3 -print -quit); git add ${manifest}; }; f"
+    pushnew = "!f() { currentBranch=$(git rev-parse --abbrev-ref HEAD); git push origin ${currentBranch}; }; f"
